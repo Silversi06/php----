@@ -1,24 +1,237 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>예쁜 쇼핑몰 화면</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>화장품 쇼핑몰</title>
+  <style>
+    /* 전체 페이지 스타일 */
+    body {
+      background-color: #fde0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* 헤더 스타일 */
+    header {
+      background-color: #ff8bbb;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      color: white;
+      font-size: 36px;
+    }
+    
+    /* 선택지 스타일 */
+    .navigation {
+      background-color: #ff8bbb;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+    
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    
+    /* 소개 문구 스타일 */
+    .intro {
+     background-color: #ffecd8;
+      padding: 20px;
+      text-align: center;
+      color: #ff8bbb;
+      font-size: 16px;
+    }
+    
+    /* 제품 목록 스타일 */
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .product {
+      width: 300px;
+      background-color: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .product h3 {
+      margin-top: 0;
+      color: #ff8bbb;
+      font-size: 20px;
+    }
+    
+    .product p {
+      color: #555555;
+    }
+    
+    .product span {
+      font-weight: bold;
+      color: #ffff;
+    }
+    
+    .product-label {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #ff8bbb;
+      color: white;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-radius: 5px;
+    }
+    
+    .best-label {
+      background-color: red;
+    }
+    
+    .new-label {
+      background-color: #ffb765;
+    }
+    
+    .add-to-cart {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #ff8bbb;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .add-to-cart:hover {
+      background-color: #ff68a6;
+    }
+    
+    /* 푸터 스타일 */
+    footer {
+      background-color: #ff8bbb;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+    
+    /* 검색창 스타일 */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .search-input {
+      padding: 8px;
+      border-radius: 5px 0 0 5px;
+      border: none;
+      font-size: 14px;
+    }
+    
+    .search-button {
+      padding: 8px 16px;
+      background-color: #ff8bbb;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .search-button:hover {
+      background-color: #ff68a6;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>쇼핑몰 로고</h1>
+    <img src="img/logo.png" alt="logo">
   </header>
   
-  <main>
-    <h2>신상품 소개</h2>
-    <p>여기에 신상품 소개 내용을 작성하세요.</p>
+  <div class="navigation">
+    <a href="#">장바구니</a>
+    <a href="#">마이페이지</a>
+  </div>
+  
+  <div class="search-bar">
+    <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+    <button class="search-button">검색</button>
+  </div>
+<br>
+<div class="intro">
+    <img src="img/sanrio.png" alt="sanrio" style="max-width: 100%; height: auto;">
+    <p>화장품 쇼핑몰에 오신 것을 환영합니다. 우리 쇼핑몰은 다양한 화장품 제품을 저렴한 가격에 제공하고 있습니다. 최신 트렌드를 반영한 제품들을 만나보세요.</p>
+  </div>
+  
+  
+  
+  <div class="product-list">
+    <div class="product">
+      <img src="img/product1.jpg" alt="Product 1">
+      <h3>롬앤</h3>
+      <p>[롬앤X산리오캐릭터즈] 베러 댄 팔레트</p>
+      <p><span>가격: 22,900원</span></p>
+      <span class="product-label best-label">Best</span>
+      <a href="#" class="add-to-cart">장바구니에 추가</a>
+    </div>
     
-    <h2>인기 상품</h2>
-    <p>여기에 인기 상품 내용을 작성하세요.</p>
-  </main>
+    <div class="product">
+      <img src="img/product2.jpg" alt="Product 2">
+      <h3>롬앤</h3>
+      <p>롬앤 쿠로미 마이멜로디 누 제로 쿠션</p>
+      <p><span>가격: 19,900원</span></p>
+      <span class="product-label new-label">신상품</span>
+      <a href="#" class="add-to-cart">장바구니에 추가</a>
+    </div>
+    
+    <div class="product">
+      <img src="img/product3.jpg" alt="Product 3">
+      <h3>롬앤</h3>
+      <p>롬앤 WHATEVER GIRLS 에디션</p>
+      <p><span>가격: 23,900원</span></p>
+      <a href="#" class="add-to-cart">장바구니에 추가</a>
+    </div>
+    
+    <!-- 추가 상품들 -->
+    <div class="product">
+      <img src="img/product4.jpg" alt="Product 4">
+      <h3>상품 제목 4</h3>
+      <p>상품 설명이나 간략한 정보를 여기에 작성하세요.</p>
+      <p><span>가격: $24.99</span></p>
+      <span class="product-label best-label">Best</span>
+      <a href="#" class="add-to-cart">장바구니에 추가</a>
+    </div>
+    
+    <div class="product">
+      <img src="img/product5.jpg" alt="Product 5">
+      <h3>상품 제목 5</h3>
+      <p>상품 설명이나 간략한 정보를 여기에 작성하세요.</p>
+      <p><span>가격: $34.99</span></p>
+      <span class="product-label new-label">신상품</span>
+      <a href="#" class="add-to-cart">장바구니에 추가</a>
+    </div>
+    
+    <!-- 다른 상품들도 이와 같은 구조로 추가할 수 있습니다 -->
+    
+  </div>
   
   <footer>
-    &copy; 2023 쇼핑몰. All rights reserved.
+    &copy; 2023 화장품 쇼핑몰. All rights reserved.
   </footer>
 </body>
 </html>
